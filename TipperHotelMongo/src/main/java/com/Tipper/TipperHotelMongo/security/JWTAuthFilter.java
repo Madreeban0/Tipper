@@ -43,6 +43,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
             filterChain.doFilter(request,response);
             return;
         }
+        
 
         jwtToken = authHeader.substring(7);
         userEmail = jwtUtils.extractUsername(jwtToken);
