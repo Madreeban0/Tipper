@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "vmware.vscode-boot-dev-pack",
+        "vmware.vscode-spring-boot"
+    ]
+}

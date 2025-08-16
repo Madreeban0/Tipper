@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TipperHotelMongoApplication<TipperHotelMongo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.Tipper.TipperHotelMongo.TipperHotelMongoApplication",
+            "projectName": "TipperHotelMongo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
