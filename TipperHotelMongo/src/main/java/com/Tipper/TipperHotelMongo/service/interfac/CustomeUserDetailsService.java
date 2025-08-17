@@ -1,4 +1,4 @@
-package com.Tipper.TipperHotelMongo.service;
+package com.Tipper.TipperHotelMongo.service.interfac;
 
 import com.Tipper.TipperHotelMongo.repo.UserRepository;
 

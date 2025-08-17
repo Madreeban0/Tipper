@@ -14,7 +14,7 @@ public class ResponseDTO {
 
     private String token;
     private String role;
-    private String expinationTime;
+    private String expirationTime;
     private String bookingsConfirmationCode;
 
     private UserDTO user;

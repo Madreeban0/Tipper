@@ -1,6 +1,7 @@
 package com.Tipper.TipperHotelMongo.utils;
 
 
+import com.Tipper.TipperHotelMongo.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,7 +29,7 @@ public class JWTUtils {
         this.Key = new SecretKeySpec(keyBytes, "HmacSHA256");
     }
 
-    public String getUserName(UserDetails userDetails){
+    public String generateToken(UserDetails userDetails){
         return Jwts.builder()
         .setSubject(userDetails.getUsername())
         .setIssuedAt(new Date(System.currentTimeMillis()))
@@ -54,5 +55,9 @@ public class JWTUtils {
 
     private boolean isTokenExpired(String token){
         return extractClaims(token, Claims :: getExpiration).before(new Date());
+    }
+
+    public Object generateToken(User user) {
+        return null;
     }
 }
