@@ -11,7 +11,6 @@ import com.Tipper.TipperHotelMongo.service.interfac.IUserService;
 import com.Tipper.TipperHotelMongo.utils.JWTUtils;
 import com.Tipper.TipperHotelMongo.utils.Utils;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -143,7 +142,7 @@ public abstract class UserService implements IUserService {
         ResponseDTO response = new ResponseDTO();
 
         try{
-            User user =userRepository.findById(userId).orElseThrow(()-> new OurException("User not found"));
+            userRepository.findById(userId).orElseThrow(()-> new OurException("User not found"));
             userRepository.deleteById(userId);
             response.setStatusCode(200);
             response.setMessage("User deleted successfully");

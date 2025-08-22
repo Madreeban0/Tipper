@@ -7,12 +7,12 @@ import org.springframework.data.mongodb.repository.Query;
 
 import java.util.List;
 
-public interface RoomsRepository extends MongoRepository<String, Rooms> {
+public interface RoomsRepository extends MongoRepository<Rooms, String> {
     @Aggregation("{$group : {_id : RoomType}}")
     List<String> findDistinctRoomType();
     @Query("{$bookings : {$size : 0}")
-    List<String> findAllAvailableRooms();
+    List<Rooms> findAllAvailableRooms();
 
-    List<String> findByRoomIdAndIdNotIn(String rooms, List<String> bookedRoomIds);
+    List<Rooms> findByRoomIdAndIdNotIn(String rooms, List<String> bookedRoomIds);
 
 }

@@ -1,5 +1,6 @@
 package com.Tipper.TipperHotelMongo.entity;
 
+import com.Tipper.TipperHotelMongo.dto.RoomDTO;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -14,7 +15,7 @@ public class Rooms {
     private String id;
     private String roomType;
     private BigDecimal roomPrice;
-    private String roomPhotoUrl;
+
     private String description;
 
     @DBRef
@@ -26,7 +27,6 @@ public class Rooms {
                 "id=" + id +
                 ",roomType='"+ roomType + '\''+
                 ",roomPrice='" + roomPrice +
-                ",roomPhotoUrl='" + roomPhotoUrl+'\''+
                 ",description='" + description + '\'' +
                 '}';
 

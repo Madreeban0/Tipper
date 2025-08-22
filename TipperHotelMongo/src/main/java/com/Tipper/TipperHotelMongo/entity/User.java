@@ -3,6 +3,7 @@ package com.Tipper.TipperHotelMongo.entity;
 import java.util.*;
 
 
+import com.Tipper.TipperHotelMongo.dto.UserDTO;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
